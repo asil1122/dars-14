@@ -15,9 +15,19 @@ export const getPath = async (path) => {
     try {
         const res = await fetch(`${url}/${path}`)
         const data = await res.json()
-
+        
         return data
     } catch (error) {
     return error.message        
     }
 }
+
+// export const getId = async (path,id) => {
+//     try {
+//         const res = await fetch(`${url}/${path}/${id}`)
+//         const data = await res.json()
+//         return data
+//     } catch (error) {
+//         return error.message
+//     }
+// }
